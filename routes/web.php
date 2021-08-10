@@ -22,17 +22,19 @@ The migrate:fresh command will drop all tables from the database and then execut
 
 Route::get('/', [EventController::class,'index'])->name('home');
 
-Route::get('/events/create', [EventController::class,'create'])->name('create');
+Route::get('events/create', [EventController::class,'create'])->name('create');
 
-Route::get('/contact', [EventController::class,'contact'])->name('contact');
+Route::get('contact', [EventController::class,'contact'])->name('contact');
 
-Route::get('/produto', [EventController::class,'queryString']);
+Route::post('events/events',[EventController::class,'store']); // store é padrao
+
+Route::get('produto', [EventController::class,'queryString']);
 
 // Route::get('/produtos_teste/{id}', function ($id) {
 //     return view('product',['id' => $id]);
 // });
 
-Route::get('/produtos/{id?}',[EventController::class,'produtos'])->name('products'); // parametro opcionals
+Route::get('produtos/{id?}',[EventController::class,'produtos'])->name('products'); // parametro opcionals
 
 // Route::get('produtos', [CategoryController::class, 'index'])->name('site.products');
 
