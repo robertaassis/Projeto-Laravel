@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.main')
 
-        <title>Laravel</title>
+@section('title','Projeto Laravel')
 
-        <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        <script src="{{asset('js/script.js')}}"></script>
-    </head>
+@section('content')
     <body>
         <h1>{!!$nome!!} </h1>
         {{-- <img src="{{asset('img/banner.jpg')}}"> --}}
@@ -31,5 +25,5 @@
         $name="Joaquim";
         if($name=='Joaquim') echo $name;
     @endphp
-    </body>
-</html>
+
+@endsection
