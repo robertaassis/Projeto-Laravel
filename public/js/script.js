@@ -1,1 +1,3 @@
-console.log("Estou funcionando!");
+function toquei(){
+    console.log("Estou funcionando!");
+}

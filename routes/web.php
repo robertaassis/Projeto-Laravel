@@ -24,6 +24,8 @@ Route::get('/', [EventController::class,'index'])->name('home');
 
 Route::get('events/create', [EventController::class,'create'])->name('create');
 
+Route::get('events/id/{id}', [EventController::class,'show']);
+
 Route::get('contact', [EventController::class,'contact'])->name('contact');
 
 Route::post('events/events',[EventController::class,'store']); // store é padrao
