@@ -8,9 +8,17 @@ use App\Models\Event;
 class EventController extends Controller
 {
     public function index(){
-        $events=Event::all(); // pega todos os eventos do banco
+
+        $search=request('search'); // id="search" em welcome.blade.php
+        if($search){
+            $events=Event::where('title','like','%'.$search.'%')->get();
+        }
+        else{
+            $events=Event::all(); 
+        }
+       // pega todos os eventos do banco
        
-        return view('welcome', ['events'=>$events]);
+        return view('welcome', ['events'=>$events, 'search'=>$search]);
     }
     
     public function create(){
