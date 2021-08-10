@@ -33,6 +33,9 @@
                         <li class="nav-item">
                             <a href="{{route('contact')}}" class="nav-link">Contact</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('create')}}" class="nav-link">Criar evento</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
