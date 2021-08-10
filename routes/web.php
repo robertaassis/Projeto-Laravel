@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
+/* The migrate:refresh command will roll back all of your migrations and then execute the migrate command
+The migrate:fresh command will drop all tables from the database and then execute the migrate command
+*/
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
