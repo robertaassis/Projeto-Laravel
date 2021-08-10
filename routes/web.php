@@ -28,3 +28,20 @@ $array=[20,40,60,80,100];
 Route::get('/contact', function () {
     return view('create');
 })->name('contact');
+
+Route::get('/produto', function () { // querystring
+    
+    $busca=request('search'); // pego o que vem no parametro ?search, ex ?search=short $busca=short
+    return view('product',['busca' => $busca]);
+});
+
+Route::get('/produtos_teste/{id}', function ($id) {
+    return view('product',['id' => $id]);
+});
+
+Route::get('/produtos/{id?}', function ($id=null) { // parametro opcional
+    
+    return view('product',['id' => $id]);
+})->name('products');
+
+

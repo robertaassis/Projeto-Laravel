@@ -17,6 +17,26 @@
         <script src="{{asset('js/script.js')}}"></script>
     </head>
     <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <a href="{{route('home')}}" class="narvar-brand">
+                        <img src="{{asset('img/hdcevents_logo.svg')}}" >
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="{{route('home')}}" class="nav-link">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('products')}}" class="nav-link">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('contact')}}" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         @yield('content')
       <footer> 
           <p>LARAVEL TESTE &copy; 2021</p>
