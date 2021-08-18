@@ -40,11 +40,26 @@ class EventController extends Controller
     public function store(Request $request) {
 
         $event = new Event;
-
-        $event->title = $request->title;
+        // dd($request->hasFile('image'));
+        //$event->title = $request->title;
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
+
+        // Image Upload
+        if($request->hasFile('image') && $request->file('image')->isValid()){
+            $requestImage=$request->image;
+
+            $extension=$requestImage->extension();
+
+            //hash
+            $imageName=md5($requestImage->getClientOriginalName(). strtotime("now"));
+
+            $request->image->move(public_path('img/events'),$imageName); // salva imagem nesse path com o nom nome $imageName
+
+            $event->image=$imageName; // salva imagem no banco
+
+        }
 
         $event->save();
 
