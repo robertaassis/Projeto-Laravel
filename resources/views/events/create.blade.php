@@ -13,8 +13,17 @@
       <input type="file" id="image" name="image" class="form-control-file">
     </div>
     <div class="form-group">
+      <label for="title">Título do evento:</label>
+      <input type="text" id="title" name="title" class="form-control">
+    </div>
+    <div class="form-group">
       <label for="title">Cidade:</label>
       <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento">
+    </div>
+
+    <div class="form-group">
+      <label for="date">Cidade:</label>
+      <input type="date" class="form-control" id="date" name="date">
     </div>
     <div class="form-group">
       <label for="title">O evento é privado?</label>
@@ -29,14 +38,12 @@
     </div>
 
     <div class="form-group">
-      <label for="title">Adicione itens de infraestrutura:</label>
+      <label for="items">Adicione itens de infraestrutura:</label>
       <div class="form-group">
         <input type="checkbox" name="items[]" value="Cadeiras">Cadeiras
         {{-- tem que ser em colchete pra ele entender que vai um ou mais tipos de itens --}}
       </div>
-      {{-- <div class="form-group">
-        <input type="checkbox" name="items[]" value="Cadeiras">Cadeiras
-      </div> --}}
+      
       <div class="form-group">
         <input type="checkbox" name="items[]" value="Palco">Palco
       </div>

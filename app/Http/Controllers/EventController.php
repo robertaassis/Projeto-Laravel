@@ -41,12 +41,13 @@ class EventController extends Controller
 
         $event = new Event;
         // dd($request->hasFile('image'));
-        //$event->title = $request->title;
+        $event->title = $request->title;
+        $event->date=$request->date; // no models coloquei protected $dates
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
         $event->items=$request->items; // fez o casting em Models -> Events
-
+        
 
         // Image Upload
         if($request->hasFile('image') && $request->file('image')->isValid()){
