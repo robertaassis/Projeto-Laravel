@@ -24,6 +24,8 @@ Route::get('/', [EventController::class,'index'])->name('home');
 
 Route::get('events/create', [EventController::class,'create'])->name('create');
 
+// Route::get('events/create', [EventController::class,'create'])->name('create')->middleware('auth'); // apenas pessoas logadas conseguiram acessar a rota
+
 Route::get('events/id/{id}', [EventController::class,'show']);
 
 Route::get('contact', [EventController::class,'contact'])->name('contact');
@@ -41,3 +43,10 @@ Route::get('produtos/{id?}',[EventController::class,'produtos'])->name('products
 // Route::get('produtos', [CategoryController::class, 'index'])->name('site.products');
 
 
+// Route::get('login', function () {
+//     return view('layouts.app');
+// });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
