@@ -24,11 +24,19 @@ Route::get('/', [EventController::class,'index'])->name('home');
 
 Route::get('events/create', [EventController::class,'create'])->name('create');
 
-Route::get('events/id/{id}', [EventController::class,'show']);
+// Route::get('events/create', [EventController::class,'create'])->name('create')->middleware('auth'); // apenas pessoas logadas conseguiram acessar a rota
+
+Route::get('events/id/{id}', [EventController::class,'show']); // mostra aquele evento especifico
 
 Route::get('contact', [EventController::class,'contact'])->name('contact');
 
 Route::post('events/events',[EventController::class,'store']); // store é padrao
+
+Route::delete('events/{id}',[EventController::class,'destroy']);
+
+// Route::get('/events/edit/{id}', [EventController::class, 'edit']);
+
+// Route::put('/events/update/{id}', [EventController::class, 'update']);
 
 Route::get('produto', [EventController::class,'queryString']);
 
@@ -40,4 +48,10 @@ Route::get('produtos/{id?}',[EventController::class,'produtos'])->name('products
 
 // Route::get('produtos', [CategoryController::class, 'index'])->name('site.products');
 
+
+// Route::get('login', function () {
+//     return view('layouts.app');
+// });
+
+Route::get('dashboard',[EventController::class,'dashboard']);
 

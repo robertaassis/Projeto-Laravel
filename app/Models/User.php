@@ -40,4 +40,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $appends=['profile_photo_url'];
+
+    public function events(){
+        return $this->hasMany('App\Models\Event');
+    }
+
 }

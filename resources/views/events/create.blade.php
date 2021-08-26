@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
       <label for="title">Título do evento:</label>
-      <input type="text" id="title" name="title" class="form-control">
+      <input type="text" id="title" name="title" class="form-control" placeholder="Nome do evento">
     </div>
     <div class="form-group">
       <label for="title">Cidade:</label>
@@ -22,12 +22,13 @@
     </div>
 
     <div class="form-group">
-      <label for="date">Cidade:</label>
+      <label for="date">Data:</label>
       <input type="date" class="form-control" id="date" name="date">
     </div>
     <div class="form-group">
       <label for="title">O evento é privado?</label>
       <select name="private" id="private" class="form-control">
+        <option value=""></option>
         <option value="0">Não</option>
         <option value="1">Sim</option>
       </select>
