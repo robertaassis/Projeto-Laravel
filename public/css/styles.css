@@ -3,6 +3,8 @@
   font-family: 'Roboto';
 }
 
+
+
 body {
   min-height: 100vh;
   padding-bottom: 100px;
@@ -20,6 +22,14 @@ header {
 
 .container-fluid {
   padding: 0;
+}
+
+.teste {
+  width: 450px;
+  margin-top:20px;
+  height: 300px; 
+  border: 5px solid red;
+ 
 }
 
 .btn-primary {

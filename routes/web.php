@@ -34,9 +34,9 @@ Route::post('events/events',[EventController::class,'store']); // store é padra
 
 Route::delete('events/{id}',[EventController::class,'destroy']);
 
-// Route::get('/events/edit/{id}', [EventController::class, 'edit']);
+Route::get('events/edit/{id}', [EventController::class, 'edit']); // "view"
 
-// Route::put('/events/update/{id}', [EventController::class, 'update']);
+Route::put('events/update/{id}', [EventController::class, 'update']); // atualiza no banco de dados
 
 Route::get('produto', [EventController::class,'queryString']);
 
@@ -44,7 +44,7 @@ Route::get('produto', [EventController::class,'queryString']);
 //     return view('product',['id' => $id]);
 // });
 
-Route::get('produtos/{id?}',[EventController::class,'produtos'])->name('products'); // parametro opcionals
+Route::get('produtos/{id?}',[EventController::class,'produtos'])->name('products'); // parametro opcionais
 
 // Route::get('produtos', [CategoryController::class, 'index'])->name('site.products');
 

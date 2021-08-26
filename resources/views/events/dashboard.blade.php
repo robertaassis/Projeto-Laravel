@@ -11,6 +11,7 @@
     @if(count($events) > 0)
     <table class="table">
         <thead>
+            
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
@@ -18,8 +19,9 @@
                 <th scope="col">Ações</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody> 
             @foreach($events as $event)
+            {{-- {{dd($loop->index)}} ao usar laços, $loop se torna acessível--}}
                 <tr>
                     <td scropt="row">{{ $loop->index + 1 }}</td>
                     <td><a href="/events/id/{{ $event->id }}">{{ $event->title }}</a></td>

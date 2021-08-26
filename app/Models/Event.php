@@ -15,6 +15,8 @@ class Event extends Model
 
     protected $dates=['date'];
 
+    protected $guarded=[]; // tudo que for mandando pelo POST pode ser atualizado sem restrição
+
     public function user(){
         return $this->belongsTo('App\Models\User');
     }
