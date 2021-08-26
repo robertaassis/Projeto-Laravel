@@ -44,8 +44,13 @@
                     Sair
                   </a>
                 </form>
+<<<<<<< HEAD
               </li> --}}
               {{-- @endauth --}}
+=======
+              </li>
+              @endauth
+>>>>>>> 3ad1b28367c42eaf84a19e30235185feafd8aebc
               {{-- @guest
               <li class="nav-item">
                 <a href="/login" class="nav-link">Entrar</a>
